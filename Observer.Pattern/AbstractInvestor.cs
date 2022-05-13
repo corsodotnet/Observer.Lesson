@@ -26,8 +26,8 @@ namespace Observer.Pattern
         }
         public void Update(Stock stock)
         {
-            Console.WriteLine("Notified {0} of {1}'s " +
-                "change to {2:C}", name, stock.Symbol, stock.Price);
+            Console.WriteLine("Notified {0} of {1}'s stock price " +
+                "changed to {2:C}", name, stock.Symbol, stock.Price);
         }
         // Gets or sets the stock
         public Stock Stock

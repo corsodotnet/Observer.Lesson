@@ -21,8 +21,18 @@ namespace Observer.Pattern
         {
                 int newInvestment = int.Parse(e.PropertyName);            
                 this.MarketCap += newInvestment;
-                Console.WriteLine($"MarketCap of {symbol} now is:  {this.MarketCap}");
-                  
+
+            if (newInvestment < 0)
+                Console.ForegroundColor = ConsoleColor.Red;
+            else
+                Console.ForegroundColor = ConsoleColor.Green;
+
+
+                Console.WriteLine($"MarketCap of {symbol} now is:  {this.MarketCap} B");
+
+            Console.ResetColor();   
+
+
         }
         public void Attach(IInvestor investor) 
         {
